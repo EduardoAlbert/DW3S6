@@ -1,0 +1,59 @@
+### teste de buscar todos os pedidos
+
+GET http://localhost:40000/getAllPedidos HTTP/1.1
+content-type: application/json
+//Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2NzQ3ODI5NzksInVzZXJuYW1lIjoicXdlIn0.SlYYCm8J6wlpb3i1jJcSvhSz6VjwKvzPOxza8P6-hzo
+
+{
+    
+}
+
+### teste de buscar pedido por ID
+
+POST http://localhost:40000/getPedidoByID HTTP/1.1
+content-type: application/json
+//Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2NzQ3ODI5NzksInVzZXJuYW1lIjoicXdlIn0.SlYYCm8J6wlpb3i1jJcSvhSz6VjwKvzPOxza8P6-hzo
+
+{
+    "pedidoid": 1
+}
+
+### teste de inserção de pedido
+
+POST http://localhost:40000/insertPedidos HTTP/1.1
+content-type: application/json
+//Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2NzM0ODE2NDEsInVzZXJuYW1lIjoicXdlIn0.LRKs8uvt-SJ9E9dMGYRkCs7HhMDlqVmwap_zcaoONeQ
+
+{
+    "pedidoid": 4,
+    "numero": 251,
+    "data": "2023-01-01",
+    "valortotal": 100,
+    "clienteid": 1,
+    "deleted": false
+}
+
+### teste de atualização de pedido
+
+POST http://localhost:40000/updatePedidos HTTP/1.1
+content-type: application/json
+//Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2NzM0ODE2NDEsInVzZXJuYW1lIjoicXdlIn0.LRKs8uvt-SJ9E9dMGYRkCs7HhMDlqVmwap_zcaoONeQ
+
+{
+    "pedidoid": 2,
+    "numero": 250,
+    "data": "2024-01-01",
+    "valortotal": 50,
+    "clienteid": 1,
+    "deleted": false
+}
+
+### teste de exclusão de pedido
+
+POST http://localhost:40000/deletePedidos HTTP/1.1
+content-type: application/json
+//Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2NzM0ODE2NDEsInVzZXJuYW1lIjoicXdlIn0.LRKs8uvt-SJ9E9dMGYRkCs7HhMDlqVmwap_zcaoONeQ
+
+{
+    "pedidoid": 6
+}
